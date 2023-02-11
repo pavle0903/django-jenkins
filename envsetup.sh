@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [-d "venv_django"]
+if [ -d "venv_django"]
 then
  echo "Python virtual env postoji"
 else
@@ -12,7 +12,7 @@ source venv_django/bin/activate
 
 pip3 install -r requirements.txt
 
-if [-d "logs"]
+if [ -d "logs"]
 then
  echo "Log folder postoji"
 else
