@@ -9,11 +9,13 @@ pipeline{
             '''
         }
         stage('Setting up Gunicorn setup')
+        {
             steps {
                 sh '''
                 chmod +x gunicorn.sh
                 '''
             }
+        }
         stage('setup NGINX')
         {
             steps {
