@@ -1,3 +1,4 @@
 django
 gunicorn
 python-decouple
+sqlite==3.9.0
