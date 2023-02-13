@@ -4,6 +4,7 @@ if [ -d "venv_django" ]
 then
  echo "Python virtual env postoji"
 else
+    apt install python3.8-venv
     python3 -m venv venv_django
 fi
 
