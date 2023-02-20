@@ -1,0 +1,24 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: Install updates(UBUNTU)
+    tags: always
+    apt:
+      upgrade: yes
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+- hosts: jenkins
+  become: true
+  roles:
+    - jenkins
+
+- hosts: web_servers
+  become: true
+  roles:
+    - web_servers
+
+

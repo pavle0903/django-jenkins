@@ -1,0 +1,23 @@
+- name: install git
+  apt:
+    name:
+      - git
+    state: latest
+
+- name: copy script for python install
+  copy: src=/Users/pavlesarenac/documents/jenkins-django/ansible/roles/web_servers/tasks/install_python.sh dest=/home/pavlesarenac mode=0777
+
+- name: run script for python install
+  command: sh /home/pavlesarenac/install_python.sh
+
+- name: copy script for repository clone from git
+  copy: src=/Users/pavlesarenac/documents/jenkins-django/ansible/roles/web_servers/tasks/clone_repo.sh dest=/home/pavlesarenac mode=0777
+
+- name: run script for git clone
+  command: sh /home/pavlesarenac/clone_repo.sh
+
+- name: copy script for env setup
+  copy: src=/Users/pavlesarenac/documents/jenkins-django/ansible/roles/web_servers/tasks/envsetup.sh dest=/home/pavlesarenac mode=0777
+
+- name: run script for env setup
+  command: sh /home/pavlesarenac/envsetup.sh

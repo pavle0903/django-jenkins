@@ -1,7 +1,5 @@
 #!/bin/bash
 
-apt install python3.8-venv
-
 if [ -d "venv_django" ]
 then
  echo "Python virtual env postoji"
@@ -25,3 +23,4 @@ fi
 
 sudo chmod -R 777 logs
 echo "envsetup finishes"
+

@@ -1,0 +1,11 @@
+- name: Copy script for java install to host
+  copy: src=/Users/pavlesarenac/documents/jenkins-django/ansible/roles/jenkins/tasks/install_java_ubuntu.sh dest=/home/pavlesarenac mode=0777
+
+- name: Run script for Java install UBUNTU
+  command: sh /home/pavlesarenac/install_java_ubuntu.sh
+
+- name: Copy script for jenkins install to host
+  copy: src=/Users/pavlesarenac/documents/jenkins-django/ansible/roles/jenkins/tasks/install_jenkins_ubuntu.sh dest=/home/pavlesarenac mode=0777
+
+- name: Run script for Jenkins install UBUNTU
+  command: sh /home/pavlesarenac/install_jenkins_ubuntu.sh
